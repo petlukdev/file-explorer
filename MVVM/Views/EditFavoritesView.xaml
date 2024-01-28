@@ -1,0 +1,54 @@
+﻿<Window x:Class="FileExplorer.MVVM.Views.EditFavoritesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileExplorer.MVVM.Views"
+        mc:Ignorable="d"
+        Title="EditFavorites" Height="150" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Background="#E5EEFF">
+
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="70px"/>
+                <Setter Property="Height" Value="25px"/>
+                <Setter Property="Margin" Value="0,0,10,0"/>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Select an item you want to remove:"
+               VerticalAlignment="Center"/>
+
+        <ComboBox Grid.Row="1"
+                  Name="box"
+                  ItemsSource="{Binding Items}"
+                  Width="350">
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+            
+        </ComboBox>
+
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Content="Storno"
+                    Command="{Binding StornoCommand}"/>
+            <Button Content="Ok"
+                    Command="{Binding OkCommand}"
+                    CommandParameter="{Binding SelectedItem, ElementName=box}"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

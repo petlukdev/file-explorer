@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Image x:Key="ArrowUpIcon" Source="pack://application:,,,/Images/arrowUp.png"/>
+    <Image x:Key="ArrowLeftIcon" Source="pack://application:,,,/Images/arrowLeft.png"/>
+    <Image x:Key="ArrowRightIcon" Source="pack://application:,,,/Images/arrowRight.png"/>
+    <Image x:Key="SearchIcon" Source="pack://application:,,,/Images/search.png"/>
+    <Image x:Key="SettingsIcon" Source="pack://application:,,,/Images/settings.png"/>
+    <ImageSource x:Key="NewFileIcon">pack://application:,,,/Images/file.png</ImageSource>
+    <ImageSource x:Key="NewFolderIcon">pack://application:,,,/Images/folder.png</ImageSource>
+    <ImageSource x:Key="DeleteIcon">pack://application:,,,/Images/delete.png</ImageSource>
+    <ImageSource x:Key="RenameIcon">pack://application:,,,/Images/rename.png</ImageSource>
+    <ImageSource x:Key="ProperitiesIcon">pack://application:,,,/Images/properities.png</ImageSource>
+    <ImageSource x:Key="CopyIcon">pack://application:,,,/Images/copy.png</ImageSource>
+    <ImageSource x:Key="PasteIcon">pack://application:,,,/Images/paste.png</ImageSource>
+    <ImageSource x:Key="ReplaceIcon">pack://application:,,,/Images/replace.png</ImageSource>
+    <ImageSource x:Key="ZIPIcon">pack://application:,,,/Images/zip.png</ImageSource>
+    <ImageSource x:Key="UnZIPIcon">pack://application:,,,/Images/unzip.png</ImageSource>
+
+</ResourceDictionary>
